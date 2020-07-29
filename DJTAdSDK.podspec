@@ -32,7 +32,6 @@ TODO: Add long description of the pod here.
   s.subspec 'DJTADSDKGDTAdapter' do |ss|
      ss.dependency 'DJTAdSDK/DJTADSDKGDT'
      ss.ios.deployment_target = '9.0'
-     ss.vendored_frameworks = 'DJTAdSDK/DJTADSDKGDT/DJTADSDKGDTAdapter.framework'
      ss.dependency 'GDTMobSDK'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
