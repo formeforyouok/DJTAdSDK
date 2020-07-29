@@ -1,0 +1,6 @@
+framework module DJTAdSDK {
+  umbrella header "DJTAdSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

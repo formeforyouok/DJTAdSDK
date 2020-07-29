@@ -21,16 +21,22 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/zhanhao/DJTAdSDK'
+  s.homepage         = 'https://github.com/formeforyouok/DJTAdSDK'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'zhanhao' => 'zhanhao@dianjiutong.cn' }
-  s.source           = { :git => 'https://github.com/zhanhao/DJTAdSDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/formeforyouok/DJTAdSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
-
-  s.source_files = 'DJTAdSDK/Classes/**/*'
+  s.ios.deployment_target = '9.0'
+  s.subspec 'DJTADSDKGDTAdapter' do |ss|
+     ss.dependency 'DJTAdSDK/DJTADSDKGDT'
+     ss.ios.deployment_target = '9.0'
+     ss.vendored_frameworks = 'DJTAdSDK/DJTADSDKGDT/DJTADSDKGDTAdapter.framework'
+     ss.dependency 'GDTMobSDK'
+     ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
+  end
+  #  s.source_files = 'DJTAdSDK/Classes/**/*'
   
   # s.resource_bundles = {
   #   'DJTAdSDK' => ['DJTAdSDK/Assets/*.png']
