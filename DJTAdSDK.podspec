@@ -29,9 +29,10 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
-  s.subspec 'DJTADSDKGDT' do |ss|
+  s.subspec 'DJTADGDTAdapter' do |ss|
      ss.ios.deployment_target = '9.0'
      ss.dependency 'GDTMobSDK'
+     ss.vendored_frameworks = 'DJTAdSDK/DJTADGDTAdapter/DJTADSDKGDTAdapter.framework'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   #  s.source_files = 'DJTAdSDK/Classes/**/*'

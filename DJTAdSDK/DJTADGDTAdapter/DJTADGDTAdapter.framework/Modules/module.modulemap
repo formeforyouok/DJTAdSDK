@@ -1,0 +1,6 @@
+framework module DJTADGDTAdapter {
+  umbrella header "DJTADGDTAdapter.h"
+
+  export *
+  module * { export * }
+}
