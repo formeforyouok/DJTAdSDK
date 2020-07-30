@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'DJTAdSDK'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of DJTAdSDK.'
+  s.summary          = 'DJTAdSDK.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -32,7 +32,7 @@ TODO: Add long description of the pod here.
   s.subspec 'DJTADGDTAdapter' do |ss|
      ss.ios.deployment_target = '9.0'
      ss.dependency 'GDTMobSDK'
-     ss.vendored_frameworks = 'DJTAdSDK/DJTADGDTAdapter/DJTADSDKGDTAdapter.framework'
+     ss.vendored_frameworks = 'DJTAdSDK/DJTADGDTAdapter/DJTADGDTAdapter.framework'
      ss.user_target_xcconfig =   {'OTHER_LDFLAGS' => ['-lObjC']}
   end
   #  s.source_files = 'DJTAdSDK/Classes/**/*'
